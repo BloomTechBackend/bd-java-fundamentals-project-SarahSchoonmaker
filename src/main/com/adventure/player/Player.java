@@ -15,7 +15,7 @@ public class Player {
     private int power = 1;
     private int health = 10;
 
-    private String name;
+    private String name="";
 
     /**
      * Sprint 1 Module 3
@@ -24,8 +24,8 @@ public class Player {
      * @param newName - the player's name that will be saved
      */
     public void setName(String newName) {
-        name = newName;
-        System.out.println("Your name is now " + name);
+        this.name = newName;
+        System.out.println("Your name is now " + this.name);
     }
 
     /**
@@ -35,7 +35,6 @@ public class Player {
      * @return The name of the player
      */
     public String getName() {
-
         return this.name;
     }
 
@@ -47,11 +46,10 @@ public class Player {
      */
     public boolean canOpenDoor() {
         int canOpen = this.level / 2;
-        if(level ==5){
+        if (level == 5) {
             return true;
-        }else{
+        } else {
             return canOpen > 2;
-
         }
     }
 
@@ -62,13 +60,10 @@ public class Player {
      * The move function takes two parameters: a direction string and an isValidDirection boolean.
      * The boolean isValidDirection tells us if that direction is valid at this point in the game.
      * It will be up to this function to determine if the direction should be processed.
-     *
      * If the direction should be processed, the currentLocationIndex will increment by 1 if the direction is EAST,
      * or decrement by 1 if the direction is WEST.
-     *
      * If the direction is invalid for any reason, the program should print "{DIRECTION} is not a valid direction" to
      * the console.
-     *
      * You should return true if the move is executed. Otherwise, return false.
      *
      * @param direction - the direction the player wishes to go
@@ -76,20 +71,20 @@ public class Player {
      * @return true if the move is executed. Otherwise, false.
      */
     public boolean move(String direction, boolean isValidDirection) {
+
         if (isValidDirection) {
-            if (direction.equals("EAST")) {
-                currentLocationIndex++;
-            } else if (direction.equals("WEST")) {
+            if (direction.equalsIgnoreCase("west")) {
                 currentLocationIndex--;
-            } else {
-                System.out.println(direction + " is not a valid direction");
-                return false;
+            } else if (direction.equalsIgnoreCase("east")) {
+                currentLocationIndex++;
             }
             return true;
         } else {
+            System.out.println(direction + " is not a valid direction");
             return false;
         }
     }
+
 
     /**
      * Sprint 3 Module 1
