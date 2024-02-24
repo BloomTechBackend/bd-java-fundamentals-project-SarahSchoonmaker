@@ -2,8 +2,8 @@ package main.com.adventure;
 
 import main.com.adventure.settings.Command;
 import main.com.adventure.settings.CommandConstants;
-import java.util.Locale;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 
@@ -58,16 +58,16 @@ public class GameInputProcessor {
      */
     private Command buildCommandWithObject(String input) {
         String command = "";
-        String Obj = "";
+        String obj = "";
         try {
             command = input.substring(0, input.indexOf(' '));
-            Obj = input.substring(input.indexOf(' ') + 1);
+            obj = input.substring(input.indexOf(' ') + 1);
 
         } catch (Exception e) {
             command = input;
 
         }
-        return new Command(command, Obj);
+        return new Command(command, obj);
     }
 
 
