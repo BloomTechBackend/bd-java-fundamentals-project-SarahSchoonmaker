@@ -2,9 +2,11 @@ package main.com.adventure;
 
 import main.com.adventure.settings.Command;
 import main.com.adventure.settings.CommandConstants;
-import java.util.Scanner;  // Import the Scanner class
-import main.com.adventure.settings.CommandVerb;
 import java.util.Locale;
+
+import java.util.Scanner;
+
+
 
 public class GameInputProcessor {
 
@@ -31,7 +33,7 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and blank object
      */
     private Command buildSimpleCommand(String input) {
-        String command = input.substring(0,input.indexOf(' '));
+        String command = input.substring(0, input.indexOf(' '));
         return new Command(command, "");
     }
 
@@ -57,11 +59,11 @@ public class GameInputProcessor {
     private Command buildCommandWithObject(String input) {
         String command = "";
         String Obj = "";
-        try{
-            command = input.substring(0,input.indexOf(' '));
-            Obj = input.substring(input.indexOf(' ') +1);
+        try {
+            command = input.substring(0, input.indexOf(' '));
+            Obj = input.substring(input.indexOf(' ') + 1);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             command = input;
 
         }

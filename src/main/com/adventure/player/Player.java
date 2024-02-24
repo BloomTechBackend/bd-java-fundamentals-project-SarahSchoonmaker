@@ -15,7 +15,7 @@ public class Player {
     private int power = 1;
     private int health = 10;
 
-    private String name="";
+    private String name = "";
 
     /**
      * Sprint 1 Module 3
