@@ -44,8 +44,10 @@ main/com/adventure/world/objects/TangibleListener.java
  main.com.adventure.world.objects.TangibleListener
 main/com/adventure/world/scenes/SceneFactory.java
  main.com.adventure.world.scenes.SceneFactory
-main/com/adventure/GameInputProcessor.java
- main.com.adventure.GameInputProcessor
+main/com/adventure/settings/AppSettings.java
+ main.com.adventure.settings.AppSettings
+ main.com.adventure.settings.AppSettings$1
+ main.com.adventure.settings.AppSettings$Story
 main/com/adventure/world/scenes/s2_m1/HouseScene.java
  main.com.adventure.world.scenes.s2_m1.HouseScene
 main/com/adventure/world/scenes/s2_m1/HouseOutsideScene.java
@@ -72,10 +74,8 @@ main/com/adventure/world/World.java
  main.com.adventure.world.World
  main.com.adventure.world.World$1
  main.com.adventure.world.World$ConsoleEscapeTangibleListener
-main/com/adventure/settings/AppSettings.java
- main.com.adventure.settings.AppSettings
- main.com.adventure.settings.AppSettings$1
- main.com.adventure.settings.AppSettings$Story
+main/com/adventure/GameInputProcessor.java
+ main.com.adventure.GameInputProcessor
 main/com/adventure/settings/GameController.java
  main.com.adventure.settings.GameController
 main/com/adventure/CombatController.java
