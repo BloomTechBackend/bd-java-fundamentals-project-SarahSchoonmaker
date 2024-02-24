@@ -31,9 +31,8 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and blank object
      */
     private Command buildSimpleCommand(String input) {
-        String command = input;
-        String Obj = "";
-        return new Command(command, Obj);
+        String command = input.substring(0,input.indexOf(' '));
+        return new Command(command, "");
     }
 
     /**
@@ -56,7 +55,17 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and object
      */
     private Command buildCommandWithObject(String input) {
-        return new Command(input.substring(0,input.indexOf(' ')), input.substring(input.indexOf(' ') +1));
+        String command = "";
+        String Obj = "";
+        try{
+            command = input.substring(0,input.indexOf(' '));
+            Obj = input.substring(input.indexOf(' ') +1);
+
+        }catch(Exception e){
+            command = input;
+
+        }
+        return new Command(command, Obj);
     }
 
 
