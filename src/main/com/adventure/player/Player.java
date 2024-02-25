@@ -154,7 +154,7 @@ public class Player {
     /**
      * Sprint 3 Module 2
      * Gets a key from the backpack array.
-     * @return the key. 
+     * @return the key.
      */
     public Key getKey() {
         return (Key) backpack.getItem("key");

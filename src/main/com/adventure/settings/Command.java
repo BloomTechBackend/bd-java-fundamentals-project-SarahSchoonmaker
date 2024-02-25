@@ -24,6 +24,9 @@ public class Command {
         this.objectName = "";
     }
 
+    public Command(CommandVerb verb, String object) {
+    }
+
     public String getObjectName() {
         return objectName;
     }

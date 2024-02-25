@@ -69,9 +69,11 @@ public class Backpack {
     public void printItems() {
         //TODO Complete the function
         System.out.println("Here are the items in your backpack:");
-        for (Tangible item : items) {
-            if (item != null) {
-                System.out.println(" - " + item.getName());
+        for (int i = 0; i < items.length; i++) {
+            if (items[i] != null && items[i].getName() != null) {
+                String itemName = items[i].getName();
+
+                System.out.println(" - " + itemName);
             }
         }
     }

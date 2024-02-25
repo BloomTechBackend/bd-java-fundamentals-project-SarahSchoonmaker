@@ -2,6 +2,7 @@ package main.com.adventure;
 
 import main.com.adventure.settings.Command;
 import main.com.adventure.settings.CommandConstants;
+import main.com.adventure.settings.CommandVerb;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -33,8 +34,17 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and blank object
      */
     private Command buildSimpleCommand(String input) {
-        String command = input.substring(0, input.indexOf(' '));
-        return new Command(command, "");
+        // Check if the input contains a space
+        int spaceIndex = input.indexOf(' ');
+        if (spaceIndex != -1) {
+            // Extract the command substring
+            String command = input.substring(0, spaceIndex);
+            return new Command(command, "");
+        } else {
+            // Handle the case where there is no space in the input
+            return new Command(input, "");
+        }
+
     }
 
     /**
@@ -44,20 +54,20 @@ public class GameInputProcessor {
      *  "use key"
      *  "examine door"
      *  "move west"
-     *
+     * <p>
      * You should also account for incomplete actions (i.e. the object is missing). In that case, you should return an
      * empty string for the object parameter.
      * Example bad input:
      *  "move"
      *  " use "
-     *
+     * <p>
      *  Note: this command must stay private when running the tests
      *
      * @param input - the input from the user
      * @return - the Command object with the proper verb and object
      */
     private Command buildCommandWithObject(String input) {
-        String command = "";
+        String command;
         String obj = "";
         try {
             command = input.substring(0, input.indexOf(' '));
@@ -68,10 +78,9 @@ public class GameInputProcessor {
 
         }
         return new Command(command, obj);
+
     }
 
-
-    /** DO NOT CHANGE ANYTHING BELOW THIS LINE. **/
 
     /**
      * Gets the next command from the user.
