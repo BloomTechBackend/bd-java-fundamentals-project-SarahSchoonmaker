@@ -24,7 +24,7 @@ public class Door implements Tangible {
     /**
      * Construct a door with defaults of level 1
      */
-    public Door(){
+    public Door() {
         this.level = 1;
     }
 
