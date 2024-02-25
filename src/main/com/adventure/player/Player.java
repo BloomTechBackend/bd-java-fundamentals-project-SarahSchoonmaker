@@ -16,6 +16,7 @@ public class Player {
     private int health = 10;
 
     private String name = "";
+    private final Backpack backpack = new Backpack();
 
     /**
      * Sprint 1 Module 3
@@ -94,6 +95,7 @@ public class Player {
      */
     public void setWeapon(Weapon item) {
         //TODO Complete this function in Sprint 3 Module 1
+        power = item.getPower();
     }
 
     /**
@@ -104,7 +106,7 @@ public class Player {
      */
     public Tangible getItem(String itemName) {
         //TODO Complete this function in Sprint 3 Module 2
-        return null;
+        return backpack.getItem(itemName);
     }
 
     /**
@@ -115,6 +117,9 @@ public class Player {
      */
     public Tangible removeItem(Tangible item) {
         //TODO Complete this function in Sprint 3 Module 2
+        if (backpack.removeItem(item)) {
+            return item;
+        }
         return null;
     }
 
@@ -124,6 +129,7 @@ public class Player {
      */
     public void printItems() {
         //TODO Complete this function in Sprint 3 Module 2
+        backpack.printItems();
     }
 
     /**
@@ -133,22 +139,23 @@ public class Player {
      */
     public void addItem(Tangible item) {
         //TODO Complete this function
+        backpack.addItem(item);
     }
 
     public void setKey(Key item) {
-        key = item;
+        backpack.addItem(item);
     }
 
     public Key getKey() {
-        return key;
+        return (Key) backpack.getItem("key");
     }
 
     public void setShovel(Shovel item) {
-        shovel = item;
+        backpack.addItem(item);
     }
 
     public Shovel getShovel() {
-        return shovel;
+        return (Shovel) backpack.getItem("shovel");
     }
 
     //////// DON'T CHANGE THE CODE BELOW. ///////////
