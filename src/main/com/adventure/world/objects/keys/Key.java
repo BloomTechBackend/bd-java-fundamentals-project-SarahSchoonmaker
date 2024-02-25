@@ -38,9 +38,9 @@ public class Key implements Tangible {
      */
     public Key(int level) {
         this.level = level;
-        this.name="key";
+        this.name = "key";
     }
-    
+
     //TODO add constructor that takes a level and name, and saves it
 
     /**
