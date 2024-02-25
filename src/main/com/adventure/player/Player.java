@@ -142,10 +142,20 @@ public class Player {
         backpack.addItem(item);
     }
 
+    /**
+     * Sprint 3 Module 2
+     * Stores the item.
+     * @param item - item to add.
+     */
     public void setKey(Key item) {
         backpack.addItem(item);
     }
 
+    /**
+     * Sprint 3 Module 2
+     * Gets a key from the backpack array.
+     * @return the key. 
+     */
     public Key getKey() {
         return (Key) backpack.getItem("key");
     }
