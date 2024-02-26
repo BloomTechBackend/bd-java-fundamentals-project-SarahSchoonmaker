@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.adventure.MT8" tests="5" skipped="0" failures="1" errors="0" timestamp="2024-02-25T18:48:33" hostname="DESKTOP-5EDIJHO" time="1.701">
+<testsuite name="com.adventure.MT8" tests="5" skipped="0" failures="1" errors="0" timestamp="2024-02-26T01:44:14" hostname="DESKTOP-5EDIJHO" time="1.358">
   <properties/>
-  <testcase name="testPrintItemsCommand()" classname="com.adventure.MT8" time="1.658">
+  <testcase name="testPrintItemsCommand()" classname="com.adventure.MT8" time="1.318">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;INVENTORY&gt; but was: &lt;inventory&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;INVENTORY&gt; but was: &lt;inventory&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -101,10 +101,10 @@
 	at java.base/java.lang.Thread.run(Thread.java:829)
 </failure>
   </testcase>
-  <testcase name="testBackpackAddRemoveItem()" classname="com.adventure.MT8" time="0.012"/>
-  <testcase name="testBackpackLimit()" classname="com.adventure.MT8" time="0.017"/>
-  <testcase name="testBackpackViaPlayer()" classname="com.adventure.MT8" time="0.011"/>
-  <testcase name="testPrintBackpack()" classname="com.adventure.MT8" time="0.001"/>
+  <testcase name="testBackpackAddRemoveItem()" classname="com.adventure.MT8" time="0.013"/>
+  <testcase name="testBackpackLimit()" classname="com.adventure.MT8" time="0.012"/>
+  <testcase name="testBackpackViaPlayer()" classname="com.adventure.MT8" time="0.009"/>
+  <testcase name="testPrintBackpack()" classname="com.adventure.MT8" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

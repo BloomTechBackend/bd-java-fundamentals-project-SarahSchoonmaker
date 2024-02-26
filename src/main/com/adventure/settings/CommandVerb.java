@@ -26,7 +26,7 @@ public enum CommandVerb {
      * @return - the CommandVerb associated with the given input.
      */
     public static CommandVerb getVerb(String verbString) {
-        CommandVerb verb = CommandVerb.INVALID;
+        CommandVerb verb;
 
         switch (verbString) {
             case "take":
