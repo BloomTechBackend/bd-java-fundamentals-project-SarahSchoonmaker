@@ -10,13 +10,11 @@ public class Player {
 
     public int level = 5;
     private int currentLocationIndex = AppSettings.getStartingLocation();
-    private Key key;
-    private Shovel shovel;
     private int power = 1;
     private int health = 10;
 
     private String name = "";
-    private final Backpack backpack = new Backpack();
+    private Backpack backpack = new Backpack();
 
     /**
      * Sprint 1 Module 3
@@ -95,7 +93,7 @@ public class Player {
      */
     public void setWeapon(Weapon item) {
         //TODO Complete this function in Sprint 3 Module 1
-        power = item.getPower();
+        this.power = item.getPower();
     }
 
     /**
@@ -117,7 +115,8 @@ public class Player {
      */
     public Tangible removeItem(Tangible item) {
         //TODO Complete this function in Sprint 3 Module 2
-        if (backpack.removeItem(item)) {
+        boolean itemIsRemoved = backpack.removeItem(item);
+        if (itemIsRemoved) {
             return item;
         }
         return null;
@@ -160,6 +159,11 @@ public class Player {
         return (Key) backpack.getItem("key");
     }
 
+    /**
+     * Sprint 3 Module 2
+     * Sets the shovel item.
+     *
+     */
     public void setShovel(Shovel item) {
         backpack.addItem(item);
     }
@@ -186,3 +190,4 @@ public class Player {
         return power;
     }
 }
+

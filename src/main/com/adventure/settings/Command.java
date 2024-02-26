@@ -24,6 +24,12 @@ public class Command {
         this.objectName = "";
     }
 
+
+    /**
+     * Creates a command with no direct object (e.g. "help").
+     * @param verb - the verb of the command
+     * @param object - the object of the command
+     */
     public Command(CommandVerb verb, String object) {
     }
 
@@ -51,3 +57,5 @@ public class Command {
                 '}';
     }
 }
+
+

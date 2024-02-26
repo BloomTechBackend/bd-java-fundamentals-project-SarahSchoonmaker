@@ -2,7 +2,6 @@ package main.com.adventure.settings;
 
 import main.com.adventure.CombatController;
 import main.com.adventure.GameInputProcessor;
-import main.com.adventure.player.Backpack;
 import main.com.adventure.player.Player;
 import main.com.adventure.world.Monster;
 import main.com.adventure.world.World;
@@ -125,55 +124,60 @@ public class GameController {
     }
 
     private void applyCommand(Command command) {
-//        if (command.getVerb().equalsIgnoreCase(CommandConstants.LOOK)) {
-//            describeCurrentScene();
-//        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.MOVE)) {
-//            move(command.getObjectName());
-//        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.HELP)) {
-//            printHelp();
-//        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.USE)) {
-//            use(command.getObjectName());
-//        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.DIG)) {
-//            dig();
-//        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.EXAMINE)) {
-//            examine(command.getObjectName());
-//        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.TAKE)) {
-//            take(command.getObjectName());
-//
-//        } else {
-//            printInvalidCommand();
-//        }
-//    }
-        switch (command.getVerb()) {
-            case LOOK:
-                describeCurrentScene();
-                break;
-            case MOVE:
-                move(command.getObjectName());
-                break;
-            case HELP:
-                printHelp();
-                break;
-            case USE:
-                use(command.getObjectName());
-                break;
-            case DIG:
-                dig();
-                break;
-            case EXAMINE:
-                examine(command.getObjectName());
-                break;
-            case TAKE:
-                take(command.getObjectName());
-                break;
-            case INVENTORY:
-                player.printItems();
-                break;
-            default:
-                printInvalidCommand();
-                break;
+        if (command.getVerb().equalsIgnoreCase(CommandConstants.LOOK)) {
+            describeCurrentScene();
+        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.MOVE)) {
+            move(command.getObjectName());
+        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.HELP)) {
+            printHelp();
+        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.USE)) {
+            use(command.getObjectName());
+        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.DIG)) {
+            dig();
+        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.EXAMINE)) {
+            examine(command.getObjectName());
+        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.TAKE)) {
+            take(command.getObjectName());
+
+        } else {
+            printInvalidCommand();
         }
     }
+
+
+
+
+
+//        switch (command.getVerb()) {
+//            case LOOK:
+//                describeCurrentScene();
+//                break;
+//            case MOVE:
+//                move(command.getObjectName());
+//                break;
+//            case HELP:
+//                printHelp();
+//                break;
+//            case USE:
+//                use(command.getObjectName());
+//                break;
+//            case DIG:
+//                dig();
+//                break;
+//            case EXAMINE:
+//                examine(command.getObjectName());
+//                break;
+//            case TAKE:
+//                take(command.getObjectName());
+//                break;
+//            case INVENTORY:
+//                player.printItems();
+//                break;
+//            default:
+//                printInvalidCommand();
+//                break;
+//        }
+//    }
 
     private void startCombat() {
         if (!(getCurrentScene() instanceof IMonsterScene)) {
@@ -327,3 +331,5 @@ public class GameController {
     }
 
 }
+
+
