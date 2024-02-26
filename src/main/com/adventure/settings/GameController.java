@@ -17,7 +17,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.Scanner;
 
-import static main.com.adventure.settings.CommandConstants.*;
+
 
 public class GameController {
 
@@ -144,40 +144,6 @@ public class GameController {
         }
     }
 
-
-
-
-
-//        switch (command.getVerb()) {
-//            case LOOK:
-//                describeCurrentScene();
-//                break;
-//            case MOVE:
-//                move(command.getObjectName());
-//                break;
-//            case HELP:
-//                printHelp();
-//                break;
-//            case USE:
-//                use(command.getObjectName());
-//                break;
-//            case DIG:
-//                dig();
-//                break;
-//            case EXAMINE:
-//                examine(command.getObjectName());
-//                break;
-//            case TAKE:
-//                take(command.getObjectName());
-//                break;
-//            case INVENTORY:
-//                player.printItems();
-//                break;
-//            default:
-//                printInvalidCommand();
-//                break;
-//        }
-//    }
 
     private void startCombat() {
         if (!(getCurrentScene() instanceof IMonsterScene)) {
