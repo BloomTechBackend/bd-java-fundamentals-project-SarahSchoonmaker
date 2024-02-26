@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adventure.MT9" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-26T02:51:57" hostname="DESKTOP-5EDIJHO" time="0.089">
+  <properties/>
+  <testcase name="testOmniDoorKey()" classname="com.adventure.MT9" time="0.089"/>
+  <system-out><![CDATA[OmniKey configured to omnidoor.
+The door is unlocked!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -20,15 +20,21 @@ public class OmniKey implements Tangible {
     /**
      * The only item the OmniKey can be used with is an OmniDoor. When the OmniKey receives an OmniDoor, this method
      * needs to configure the key to the OmniDoor, making the OmniKey become a valid key for the door.
-     * Note that this does NOT unlock the door; it merely configures the key so it can unlock the door in the future.
+     * Note that this does NOT unlock the door; it merely configures the key, so it can unlock the door in the future.
      * @param door - If it's an OmniDoor, this key will configure itself to it. Otherwise, inform the user
      *             that this key can only be used with OmniDoors and do nothing more.
      */
     @Override
     public void useItem(Tangible door) {
         if (door instanceof OmniDoor) {
-            //TODO Complete the function
-            System.out.println("Your solution goes here");
+            int wrongPinNumber = ((OmniDoor) door).getFirstWrongPin(this);
+            while (wrongPinNumber != -1) {
+                pins[wrongPinNumber] = true;
+                wrongPinNumber = ((OmniDoor) door).getFirstWrongPin(this);
+            }
+            System.out.println(this.getName() + " configured to " + door.getName() + ".");
+        } else {
+            System.out.println("This key can only be used with OmniDoors.");
         }
     }
 
