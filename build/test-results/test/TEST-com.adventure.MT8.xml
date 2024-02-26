@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adventure.MT8" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-02-26T16:09:17" hostname="DESKTOP-5EDIJHO" time="2.21">
+  <properties/>
+  <testcase name="testPrintItemsCommand()" classname="com.adventure.MT8" time="2.13"/>
+  <testcase name="testBackpackAddRemoveItem()" classname="com.adventure.MT8" time="0.04"/>
+  <testcase name="testBackpackLimit()" classname="com.adventure.MT8" time="0.012"/>
+  <testcase name="testBackpackViaPlayer()" classname="com.adventure.MT8" time="0.009"/>
+  <testcase name="testPrintBackpack()" classname="com.adventure.MT8" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

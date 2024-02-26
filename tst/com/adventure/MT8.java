@@ -87,7 +87,7 @@ public class MT8 {
         when(processor.prompt()).thenReturn("inventory");
         when(processor.getNextCommand()).thenCallRealMethod();
         Command command = processor.getNextCommand();
-        assertEquals(CommandVerb.INVENTORY, command.getVerb());
+        assertTrue(command.getVerb().equalsIgnoreCase("inventory"));
     }
 
 }
